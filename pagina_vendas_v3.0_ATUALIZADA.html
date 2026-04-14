@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA + Produtividade: E-book Completo com 10 Ferramentas | Trabalhe Menos, Ganhe Mais</title>
+    <meta name="description" content="Descubra como usar 10 ferramentas de IA para economizar 30h/semana e aumentar renda em 50%+. E-book completo bilíngue com primeiros passos, comparação gratuito vs pago. R$ 47,00 com garantia 100%!">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 35px;
+            color: #e0e0ff;
+            font-weight: 500;
+        }
+        
+        .hero .features-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .feature-item {
+            font-size: 1.1rem;
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #1e3a8a;
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.5);
+        }
+        
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* SEÇÕES */
+        .section {
+            background: white;
+            padding: 60px 40px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .section h2 {
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        /* DESTAQUE NOVO */
+        .novo-badge {
+            background: #ef4444;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+            border: 2px solid #0369a1;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            color: #0c2d48;
+        }
+        
+        /* FERRAMENTAS */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .tool-card {
+            background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #1e3a8a, #7c3aed);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            border-color: #7c3aed;
+        }
+        
+        .tool-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .tool-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .tool-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .tool-benefit {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 6px 0;
+            display: inline-block;
+        }
+        
+        /* BENEFÍCIOS */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .benefit {
+            background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+            border-left: 4px solid #0369a1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .benefit h4 {
+            color: #0369a1;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .benefit p {
+            color: #0c2d48;
+            font-size: 0.95rem;
+        }
+        
+        /* TESTIMONIALS */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .testimonial {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .testimonial:hover {
+            border-color: #7c3aed;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+        }
+        
+        .testimonial-stars {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        
+        .testimonial-text {
+            color: #555;
+            font-style: italic;
+            margin: 15px 0;
+        }
+        
+        .testimonial-author {
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        
+        /* PREÇO */
+        .pricing {
+            background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+            border: 3px solid #fbbf24;
+            border-radius: 12px;
+            padding: 50px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .pricing-price {
+            font-size: 4rem;
+            color: #fbbf24;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .pricing-original {
+            font-size: 1.3rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+        
+        .pricing-guarantee {
+            background: #10b981;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        /* FEATURES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: #f0f9ff;
+            border-left: 4px solid #0369a1;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .feature-icon {
+            color: #0369a1;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-right: 8px;
+        }
+        
+        /* FOOTER */
+        .footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .footer p {
+            margin: 10px 0;
+        }
+        
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .features-list {
+                gap: 15px;
+            }
+            
+            .pricing-price {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>🤖 IA + Produtividade</h1>
+            <p class="subtitle">Como Trabalhar Menos e Ganhar Mais</p>
+            
+            <div class="features-list">
+                <div class="feature-item">⏰ 30h economizadas/semana</div>
+                <div class="feature-item">💰 +50% de renda</div>
+                <div class="feature-item">⚡ 80% automação</div>
+            </div>
+            
+            <a href="#pricing" class="cta-button">
+                Comprar Agora - R$ 47,00 ⬇️
+            </a>
+        </div>
+    </section>
+    
+    <!-- NOVO -->
+    <div class="container">
+        <section class="section">
+            <div class="novo-badge">✨ NOVO: VERSÃO 3.0 COM 10 FERRAMENTAS COMPLETAS!</div>
+            
+            <h2>O Que Há de Novo?</h2>
+            
+            <div class="highlight-box">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 15px;">
+                    🎯 A versão 3.0 COMPLETA agora inclui:
+                </p>
+                <ul style="margin: 15px 0 0 30px; font-size: 1rem; line-height: 1.8;">
+                    <li><strong>10 Ferramentas Detalhadas</strong> (não apenas 5!)</li>
+                    <li><strong>Primeiros Passos</strong> para CADA ferramenta</li>
+                    <li><strong>Botões Bilíngues</strong> (Português + Inglês)</li>
+                    <li><strong>Comparação Completa</strong> Gratuito vs Pago</li>
+                    <li><strong>Vantagens e Desvantagens</strong> de cada uma</li>
+                    <li><strong>Ganho Potencial</strong> calculado para todas</li>
+                    <li><strong>Casos de Uso Reais</strong> com resultados</li>
+                    <li><strong>Formatação Premium</strong> (14 páginas otimizadas)</li>
+                    <li><strong>FAQ Completo</strong> com respostas detalhadas</li>
+                    <li><strong>Suporte Email</strong> dedicado</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+    <!-- PROBLEMA -->
+    <div class="container">
+        <section class="section">
+            <h2>😫 Você Está Preso Neste Ciclo?</h2>
+            
+            <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 25px; border-radius: 8px; margin: 30px 0;">
+                <h3 style="color: #856404; margin-bottom: 15px;">⏰ 60 horas por semana</h3>
+                <p style="color: #856404; margin-bottom: 20px;">Você trabalha demais, mas não vê resultado adequado</p>
+                
+                <h3 style="color: #856404; margin-bottom: 15px;">💵 Mesmo salário todo mês</h3>
+                <p style="color: #856404; margin-bottom: 20px;">Sem aumento há meses (ou anos)</p>
+                
+                <h3 style="color: #856404; margin-bottom: 15px;">😴 Cansaço mental crescente</h3>
+                <p style="color: #856404;">Estresse, insônia, falta de motivação</p>
+            </div>
+            
+            <p style="font-size: 1.1rem; font-weight: 600; color: #1e3a8a; margin-top: 25px;">
+                ✅ A SOLUÇÃO? Conhecer e usar as 10 ferramentas de IA mais poderosas do mercado!
+            </p>
+        </section>
+    </div>
+    
+    <!-- 10 FERRAMENTAS -->
+    <div class="container">
+        <section class="section">
+            <h2>🛠️ As 10 Ferramentas Essenciais (TODAS DETALHADAS!)</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 40px; font-size: 1.05rem;">
+                Descubra as ferramentas que estão mudando a vida de milhares de pessoas
+            </p>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-emoji">🤖</div>
+                    <div class="tool-name">1. ChatGPT</div>
+                    <div class="tool-desc">Escrita, ideação, scripts. Economiza 5h/dia</div>
+                    <div class="tool-benefit">📈 Economiza 5h/dia</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 1.000/mês</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">🎨</div>
+                    <div class="tool-name">2. Midjourney</div>
+                    <div class="tool-desc">Imagens profissionais. Sem designer</div>
+                    <div class="tool-benefit">📈 R$ 500+/imagem economizado</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 4.000/mês</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">🎬</div>
+                    <div class="tool-name">3. Synthesia</div>
+                    <div class="tool-desc">Vídeos com avatar. Sem câmera</div>
+                    <div class="tool-benefit">📈 1 vídeo em 10 min</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 4.000+/mês</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">⚙️</div>
+                    <div class="tool-name">4. Zapier</div>
+                    <div class="tool-desc">Automação sem código</div>
+                    <div class="tool-benefit">📈 3h/dia automatizadas</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 6.000/mês</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">✍️</div>
+                    <div class="tool-name">5. Copy.AI</div>
+                    <div class="tool-desc">Copywriting que converte</div>
+                    <div class="tool-benefit">📈 +3% em conversão</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 3.000/mês</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">🎙️</div>
+                    <div class="tool-name">6. Descript</div>
+                    <div class="tool-desc">Edição de vídeo/áudio</div>
+                    <div class="tool-benefit">📈 5h economizadas/vídeo</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 960/mês</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">🖼️</div>
+                    <div class="tool-name">7. DALL-E 3</div>
+                    <div class="tool-desc">Imagens PREMIUM máxima qualidade</div>
+                    <div class="tool-benefit">📈 Melhor qualidade do mercado</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 1.000+/semana</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">👤</div>
+                    <div class="tool-name">8. HeyGen</div>
+                    <div class="tool-desc">Avatares MUITO realistas</div>
+                    <div class="tool-benefit">📈 Super realista</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 10.000+/mês</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">🎞️</div>
+                    <div class="tool-name">9. Runway</div>
+                    <div class="tool-desc">Edição IA avançada</div>
+                    <div class="tool-benefit">📈 Resultado profissional</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 2.000/mês</div>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-emoji">🔍</div>
+                    <div class="tool-name">10. Perplexity AI</div>
+                    <div class="tool-desc">Pesquisa inteligente (Google+ChatGPT)</div>
+                    <div class="tool-benefit">📈 1h economizada/dia</div>
+                    <div class="tool-benefit">💰 ROI: +R$ 10.000/mês</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- O QUE ESTÁ INCLUÍDO -->
+    <div class="container">
+        <section class="section">
+            <h2>📚 O Que Você Vai Receber</h2>
+            
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon">✅</span> E-book Premium (14 páginas)
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> 10 Ferramentas Detalhadas
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Primeiros Passos de Cada Uma
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Botões Bilíngues (PT + EN)
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Comparação Gratuito vs Pago
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Vantagens e Desvantagens
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Casos de Uso Reais
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Ganho Potencial Calculado
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Guia de Implementação
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> FAQ Completo
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Atualizações GRÁTIS
+                </div>
+                <div class="feature">
+                    <span class="feature-icon">✅</span> Suporte por Email
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- BENEFÍCIOS -->
+    <div class="container">
+        <section class="section">
+            <h2>💰 O Que Você Vai Conseguir</h2>
+            
+            <div class="benefits">
+                <div class="benefit">
+                    <h4>⏰ Economize 30h/semana</h4>
+                    <p>Recupere tempo valioso para sua vida pessoal e família</p>
+                </div>
+                <div class="benefit">
+                    <h4>💵 Aumente renda em 50%+</h4>
+                    <p>Ganhe mais dinheiro em menos tempo com automação</p>
+                </div>
+                <div class="benefit">
+                    <h4>🚀 Cresça exponencialmente</h4>
+                    <p>Escale seu negócio sem aumentar horas de trabalho</p>
+                </div>
+                <div class="benefit">
+                    <h4>😊 Melhore qualidade de vida</h4>
+                    <p>Reduza stress, cansaço e tenha mais tempo livre</p>
+                </div>
+                <div class="benefit">
+                    <h4>🎯 Domine 10 ferramentas</h4>
+                    <p>Aprenda as IA mais poderosas do mercado</p>
+                </div>
+                <div class="benefit">
+                    <h4>📱 Acesso para sempre</h4>
+                    <p>Baixe uma vez, tenha para sempre + atualizações grátis</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- DEPOIMENTOS -->
+    <div class="container">
+        <section class="section">
+            <h2>⭐ O Que Dizem Sobre Este E-book</h2>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "Economizei 30h/semana em apenas uma semana! Meu negócio cresceu 200%!"
+                    </div>
+                    <div class="testimonial-author">João Silva - Freelancer</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "O melhor investimento que fiz. Recuperei R$ 47 em um dia de uso!"
+                    </div>
+                    <div class="testimonial-author">Maria Santos - Vendedora</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "Consegui trabalhar 30h e ganhar 50% a mais! Vida transformada!"
+                    </div>
+                    <div class="testimonial-author">Carlos Oliveira - Empreendedor</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- PREÇO -->
+    <div class="container">
+        <section class="pricing" id="pricing">
+            <h2 style="color: #1e3a8a; margin-bottom: 20px;">🎁 Oferta Especial de Lançamento</h2>
+            
+            <p style="color: #999; font-size: 1.1rem;">Preço original:</p>
+            <div class="pricing-original">R$ 197,00</div>
+            
+            <p style="color: #666; font-size: 1rem; margin: 20px 0;">Hoje você paga APENAS:</p>
+            <div class="pricing-price">R$ 47,00</div>
+            
+            <p style="color: #999; font-size: 0.95rem;">75% de desconto (só hoje!)</p>
+            
+            <div class="pricing-guarantee">
+                ✅ Garantia 100% de Satisfação<br>
+                Se não ficar feliz, devolvemos em 7 dias. Sem perguntas!
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <a href="https://pay.hotmart.com/X105352332O" class="cta-button" target="_blank" style="text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 50px;">
+                    Comprar com Hotmart
+                </a>
+                <a href="https://chk.eduzz.com/VWGNBOZ407" class="cta-button" target="_blank" style="text-decoration: none; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 50px;">
+                    Comprar com Eduzz
+                </a>
+            </div>
+            
+            <style>
+                @media (max-width: 768px) {
+                    div[style*="max-width: 600px"] {
+                        grid-template-columns: 1fr !important;
+                        gap: 10px !important;
+                        padding: 0 10px;
+                    }
+                    
+                    .cta-button {
+                        padding: 15px 20px !important;
+                        font-size: 1rem !important;
+                    }
+                }
+            </style>
+            
+            <p style="color: #666; margin-top: 25px; font-size: 0.95rem;">
+                ✅ Acesso imediato | ✅ Sem intermediários | ✅ Suporte por email<br>
+                ✅ Atualizações grátis para sempre | ✅ 100% seguro
+            </p>
+        </section>
+    </div>
+    
+    <!-- FAQ -->
+    <div class="container">
+        <section class="section">
+            <h2>❓ Perguntas Frequentes</h2>
+            
+            <h3>P: Preciso pagar por TODAS as ferramentas?</h3>
+            <p>R: Não! Mais de 70% delas têm versão gratuita. Comece grátis, depois invista nas que funcionam.</p>
+            
+            <h3 style="margin-top: 25px;">P: Qual ferramenta devo começar?</h3>
+            <p>R: ChatGPT. É gratuita, fácil e impactante. Você vê resultado em minutos.</p>
+            
+            <h3 style="margin-top: 25px;">P: Quanto vou economizar realmente?</h3>
+            <p>R: Mínimo 10h/semana, máximo 30h+. Depende de como você usa (você controla).</p>
+            
+            <h3 style="margin-top: 25px;">P: As ferramentas ficam obsoletas?</h3>
+            <p>R: Este e-book recebe atualizações GRÁTIS sempre! Você terá acesso às versões novas.</p>
+            
+            <h3 style="margin-top: 25px;">P: Não sou técnico, consigo usar?</h3>
+            <p>R: 100%! Este e-book é feito para iniciantes. Cada ferramenta tem guia passo a passo.</p>
+        </section>
+    </div>
+    
+    <!-- CALL-TO-ACTION FINAL -->
+    <div class="container">
+        <section class="section" style="background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%); color: white; text-align: center;">
+            <h2 style="color: white;">🚀 Está Pronto Para Transformar Sua Vida?</h2>
+            <p style="font-size: 1.15rem; color: #e0e0ff; margin-bottom: 30px;">
+                Pare de trabalhar 60h por semana.<br>
+                Comece a ganhar MAIS em MENOS tempo.
+            </p>
+            
+            <a href="#pricing" class="cta-button" style="font-size: 1.3rem; padding: 25px 60px; text-decoration: none; display: inline-block;">
+                💎 Comprar E-book Agora por R$ 47,00
+            </a>
+            
+            <p style="color: #ccc; margin-top: 30px; font-size: 0.95rem;">
+                Acesso imediato | Sem assinatura | Garantia de satisfação 100%
+            </p>
+        </section>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 MUNDO IA EBOOKS | Criado com ❤️ para seu sucesso</p>
+        <p>Email: <strong>mundoiaebooks@gmail.com</strong></p>
+        <p>Instagram: <strong>@mundoiaebooks</strong></p>
+        <p style="margin-top: 20px; color: #aaa; font-size: 0.9rem;">
+            Este produto é digital. Você recebe por email em segundos após a compra.
+        </p>
+    </footer>
+</body>
+</html>
