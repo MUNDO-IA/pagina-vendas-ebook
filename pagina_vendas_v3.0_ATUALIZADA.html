@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book de IA: 10 Ferramentas com Guia Prático | Mundo IA</title>
+    <meta name="description" content="E-book com 10 ferramentas de IA, primeiros passos, comparação gratuito vs pago, casos de uso e FAQ. Material digital educativo.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 35px;
+            color: #e0e0ff;
+            font-weight: 500;
+        }
+        
+        .hero .features-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .feature-item {
+            font-size: 1.1rem;
+            color: #fbbf24;
+            font-weight: 600;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: #1e3a8a;
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.5);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            background: white;
+            padding: 60px 40px;
+            margin: 30px 0;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        
+        .section h2 {
+            color: #1e3a8a;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .badge {
+            background: #3b82f6;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+            border: 2px solid #0369a1;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+            color: #0c2d48;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .tool-card {
+            background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #1e3a8a, #7c3aed);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            border-color: #7c3aed;
+        }
+        
+        .tool-emoji {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        
+        .tool-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .tool-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .tool-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .benefit {
+            background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 100%);
+            border-left: 4px solid #0369a1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .benefit h4 {
+            color: #0369a1;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .benefit p {
+            color: #0c2d48;
+            font-size: 0.95rem;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .testimonial {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .testimonial:hover {
+            border-color: #7c3aed;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+        }
+        
+        .testimonial-stars {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        
+        .testimonial-text {
+            color: #555;
+            font-style: italic;
+            margin: 15px 0;
+        }
+        
+        .testimonial-author {
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+        
+        .pricing {
+            background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+            border: 3px solid #fbbf24;
+            border-radius: 12px;
+            padding: 50px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .pricing-price {
+            font-size: 4rem;
+            color: #fbbf24;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .pricing-original {
+            font-size: 1.3rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+        
+        .pricing-guarantee {
+            background: #10b981;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 25px 0;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: #f0f9ff;
+            border-left: 4px solid #0369a1;
+            padding: 15px;
+            border-radius: 6px;
+        }
+        
+        .feature-icon {
+            color: #0369a1;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-right: 8px;
+        }
+        
+        .footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .footer p {
+            margin: 10px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .features-list {
+                gap: 15px;
+            }
+            
+            .pricing-price {
+                font-size: 2.5rem;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>📘 E-book: 10 Ferramentas de IA</h1>
+            <p class="subtitle">Guia prático para usar inteligência artificial no dia a dia</p>
+            
+            <div class="features-list">
+                <div class="feature-item">📖 14 páginas</div>
+                <div class="feature-item">🤖 10 ferramentas detalhadas</div>
+                <div class="feature-item">🎯 Exemplos práticos</div>
+            </div>
+            
+            <a href="#pricing" class="cta-button">
+                Quero o E-book - R$ 47,00
+            </a>
+        </div>
+    </section>
+    
+    <div class="container">
+        <section class="section">
+            <div class="badge">📘 Versão 3.0 – 10 ferramentas completas</div>
+            
+            <h2>O que há de novo nesta edição</h2>
+            
+            <div class="highlight-box">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 15px;">
+                    ✨ Conteúdo da versão 3.0:
+                </p>
+                <ul style="margin: 15px 0 0 30px; font-size: 1rem; line-height: 1.8;">
+                    <li><strong>10 ferramentas detalhadas</strong> – cada uma com primeiros passos</li>
+                    <li><strong>Botões bilíngues</strong> (Português / Inglês)</li>
+                    <li><strong>Comparação entre versão gratuita e paga</strong> de cada ferramenta</li>
+                    <li><strong>Vantagens e desvantagens</strong> de cada IA</li>
+                    <li><strong>Casos de uso reais</strong> (sem promessas de resultados)</li>
+                    <li><strong>Formatação premium</strong> – 14 páginas otimizadas</li>
+                    <li><strong>FAQ completo</strong> com dúvidas comuns</li>
+                    <li><strong>Suporte por e-mail</strong> incluso</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+    <div class="container">
+        <section class="section">
+            <h2>🤔 Você se identifica com alguma dessas situações?</h2>
+            
+            <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 25px; border-radius: 8px; margin: 30px 0;">
+                <p style="color: #856404; margin-bottom: 15px;">⏳ Muitas tarefas repetitivas consomem seu dia</p>
+                <p style="color: #856404; margin-bottom: 15px;">📉 Dificuldade para aprender novas ferramentas sozinho</p>
+                <p style="color: #856404; margin-bottom: 0;">😓 Falta de um guia estruturado e passo a passo</p>
+            </div>
+            
+            <p style="font-size: 1.1rem; font-weight: 500; color: #1e3a8a; margin-top: 25px;">
+                ✅ Este e-book foi feito para ajudar você a conhecer e aplicar IA de forma prática.
+            </p>
+        </section>
+    </div>
+    
+    <div class="container">
+        <section class="section">
+            <h2>🛠️ As 10 ferramentas abordadas no e-book</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 40px;">
+                Cada ferramenta é explicada com primeiros passos, comparação de planos e casos de uso.
+            </p>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-emoji">🤖</div>
+                    <div class="tool-name">ChatGPT</div>
+                    <div class="tool-desc">Escrita, ideação, roteiros e assistência criativa.</div>
+                    <div class="tool-tag">📘 Guia passo a passo incluso</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">🎨</div>
+                    <div class="tool-name">Midjourney</div>
+                    <div class="tool-desc">Geração de imagens com descrições textuais.</div>
+                    <div class="tool-tag">🎯 Exemplos de prompts</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">🎬</div>
+                    <div class="tool-name">Synthesia</div>
+                    <div class="tool-desc">Criação de vídeos com avatares virtuais.</div>
+                    <div class="tool-tag">📹 Tutorial prático</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">⚙️</div>
+                    <div class="tool-name">Zapier</div>
+                    <div class="tool-desc">Automação entre aplicativos sem código.</div>
+                    <div class="tool-tag">🔗 Exemplos de automação</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">✍️</div>
+                    <div class="tool-name">Copy.ai</div>
+                    <div class="tool-desc">Geração de textos para marketing e vendas.</div>
+                    <div class="tool-tag">📝 Modelos prontos</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">🎙️</div>
+                    <div class="tool-name">Descript</div>
+                    <div class="tool-desc">Edição de áudio e vídeo baseada em texto.</div>
+                    <div class="tool-tag">✂️ Edição simplificada</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">🖼️</div>
+                    <div class="tool-name">DALL-E 3</div>
+                    <div class="tool-desc">Geração avançada de imagens com IA.</div>
+                    <div class="tool-tag">🎨 Qualidade profissional</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">👤</div>
+                    <div class="tool-name">HeyGen</div>
+                    <div class="tool-desc">Avatares realistas para vídeos.</div>
+                    <div class="tool-tag">🎥 Vídeos com avatar</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">🎞️</div>
+                    <div class="tool-name">Runway</div>
+                    <div class="tool-desc">Edição de vídeo com inteligência artificial.</div>
+                    <div class="tool-tag">✨ Efeitos automáticos</div>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-emoji">🔍</div>
+                    <div class="tool-name">Perplexity AI</div>
+                    <div class="tool-desc">Pesquisa assistida por IA.</div>
+                    <div class="tool-tag">🔎 Busca inteligente</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="container">
+        <section class="section">
+            <h2>📚 O que você recebe ao adquirir</h2>
+            
+            <div class="features">
+                <div class="feature"><span class="feature-icon">✅</span> E-book digital (14 páginas)</div>
+                <div class="feature"><span class="feature-icon">✅</span> 10 ferramentas detalhadas</div>
+                <div class="feature"><span class="feature-icon">✅</span> Primeiros passos de cada uma</div>
+                <div class="feature"><span class="feature-icon">✅</span> Botões bilíngues (PT/EN)</div>
+                <div class="feature"><span class="feature-icon">✅</span> Comparação gratuito vs pago</div>
+                <div class="feature"><span class="feature-icon">✅</span> Vantagens e desvantagens</div>
+                <div class="feature"><span class="feature-icon">✅</span> Casos de uso reais</div>
+                <div class="feature"><span class="feature-icon">✅</span> Guia de implementação</div>
+                <div class="feature"><span class="feature-icon">✅</span> FAQ completo</div>
+                <div class="feature"><span class="feature-icon">✅</span> Atualizações gratuitas</div>
+                <div class="feature"><span class="feature-icon">✅</span> Suporte por e-mail</div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="container">
+        <section class="section">
+            <h2>🌟 O que leitores estão dizendo</h2>
+            
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "O e-book é muito claro e direto. Consegui começar a usar o ChatGPT no mesmo dia."
+                    </div>
+                    <div class="testimonial-author">João S.</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "Gostei da comparação entre versões gratuitas e pagas. Me ajudou a decidir por onde começar."
+                    </div>
+                    <div class="testimonial-author">Maria F.</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "Material bem organizado, com exemplos práticos. Recomendo para quem está começando em IA."
+                    </div>
+                    <div class="testimonial-author">Carlos O.</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="container">
+        <section class="pricing" id="pricing">
+            <h2 style="color: #1e3a8a; margin-bottom: 20px;">💰 Investimento</h2>
+            
+            <p style="color: #999; font-size: 1.1rem;">Valor sugerido:</p>
+            <div class="pricing-original">R$ 197,00</div>
+            
+            <p style="color: #666; font-size: 1rem; margin: 20px 0;">Por tempo limitado:</p>
+            <div class="pricing-price">R$ 47,00</div>
+            
+            <div class="pricing-guarantee">
+                ✅ Garantia de 7 dias<br>
+                Se não ficar satisfeito, devolvemos 100% do valor.
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px; width: 100%; max-width: 600px; margin-left: auto; margin-right: auto;">
+                <a href="https://pay.hotmart.com/X105352332O" class="cta-button" target="_blank" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
+                    Comprar com Hotmart
+                </a>
+                <a href="https://chk.eduzz.com/VWGNBOZ407" class="cta-button" target="_blank" style="text-decoration: none; display: flex; align-items: center; justify-content: center;">
+                    Comprar com Eduzz
+                </a>
+            </div>
+            
+            <p style="color: #666; margin-top: 25px; font-size: 0.95rem;">
+                ✅ Acesso imediato após a compra<br>
+                ✅ Arquivo digital (PDF)<br>
+                ✅ Suporte por e-mail incluso
+            </p>
+        </section>
+    </div>
+    
+    <div class="container">
+        <section class="section">
+            <h2>❓ Perguntas frequentes</h2>
+            
+            <h3>Preciso pagar por todas as ferramentas mencionadas?</h3>
+            <p>Não. A maioria tem versão gratuita. O e-book mostra as diferenças entre os planos.</p>
+            
+            <h3 style="margin-top: 25px;">Qual ferramenta devo aprender primeiro?</h3>
+            <p>O e-book sugere começar pelo ChatGPT por ser gratuito e ter muitos exemplos práticos.</p>
+            
+            <h3 style="margin-top: 25px;">Preciso ter conhecimento técnico?</h3>
+            <p>Não. O material foi pensado para iniciantes, com instruções passo a passo.</p>
+            
+            <h3 style="margin-top: 25px;">As ferramentas ficam desatualizadas?</h3>
+            <p>O e-book inclui atualizações gratuitas sempre que o conteúdo é revisado.</p>
+            
+            <h3 style="margin-top: 25px;">Como recebo o e-book após a compra?</h3>
+            <p>Você recebe um link de download por e-mail em alguns minutos.</p>
+        </section>
+    </div>
+    
+    <div class="container">
+        <section class="section" style="background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%); color: white; text-align: center;">
+            <h2 style="color: white;">📘 Pronto para conhecer as ferramentas?</h2>
+            <p style="font-size: 1.15rem; color: #e0e0ff; margin-bottom: 30px;">
+                Adquira o e-book e tenha um guia prático sempre à mão.
+            </p>
+            
+            <a href="#pricing" class="cta-button" style="font-size: 1.3rem; padding: 20px 50px; text-decoration: none; display: inline-block;">
+                Quero meu e-book por R$ 47,00
+            </a>
+            
+            <p style="color: #ccc; margin-top: 30px; font-size: 0.95rem;">
+                Acesso imediato | Pagamento seguro | Garantia de 7 dias
+            </p>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p>© 2026 MUNDO IA EBOOKS | Material educativo digital</p>
+        <p>E-mail: <strong>mundoiaebooks@gmail.com</strong></p>
+        <p>Instagram: <strong>@mundoiaebooks</strong></p>
+        <p style="margin-top: 20px; color: #aaa; font-size: 0.9rem;">
+            Este produto é digital. Você recebe o link de download por e-mail após a confirmação do pagamento.
+        </p>
+    </footer>
+</body>
+</html>
